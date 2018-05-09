@@ -40,7 +40,7 @@ class News
 
 		}
 
-		@thanhien={
+		@thanhnien={
 		:tintuc    => 'https://thanhnien.vn/rss/home.rss',
 		:thoisu    => 'https://thanhnien.vn/rss/viet-nam.rss',
 		:kinhdoanh => 'https://thanhnien.vn/rss/kinh-te.rss',
@@ -95,7 +95,7 @@ class News
 		:giaitri	=>'',
 		:dulich   => 'https://laodong.vn/rss/du-lich.rss',
 		:kinhte   => 'https://laodong.vn/rss/kinh-te.rss',
-		:vanhoa    => 'https://laodong.vn/rss/van-hoa-giai-tri.rss'
+		:vanhoa    =>'https://laodong.vn/rss/van-hoa-giai-tri.rss'
 		}
 
 
@@ -139,7 +139,7 @@ class News
 	 	@pages={
 		'vnexpress' => @vnexpress,
 		'dantri' 		=> @dantri,
-		'thanhien' 	=> @thanhien,
+		'thanhnien' 	=> @thanhnien,
 		'nhandan' 	=> @nhandan,
 		'laodong' 	=> @laodong,
 		'tuoitre' 	=> @tuoitre,
