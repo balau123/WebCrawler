@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-theme.css" type="text/css">
+	<link rel="stylesheet" href="bootstrap-theme.min.css" type="text/css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery_menu.js"></script>
+  <!-- <script src="js/wow.js"></script> -->
+ <!--   <link src="wow-animation/animate.css"></link> -->
+   <script src="js/animation.js"></script>
+
+   <style>
+     .title {
+    color: #fff;
+    text-align: center;
+    background: #5cb85c;
+    min-height: 60px;
+    }
+    .tochoose{
+      border-radius: 11px;
+      border: 1px solid;
+    }
+    .row.chon {
+    margin-top: 10px;
+    margin-left: 10px;
+   }
+   .btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    margin-top: 10px;
+}
+
+
+  .title-main{
+    margin-top: 10px;
+  }
+    
+   </style>
+  
+</head>
+<body> 
+  <div class="container">
+      <div class="row">
+         <div class="title">
+         	    <h1 style="margin-top: 10px"><marquee width="100%" behavior="alternate">XÂY DỰNG WEBCRAWLER BẰNG RAILS
+  
+</marquee></h1>
+         </div>
+      </div>
+
+      <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 tochoose">
+              <form>
+                <div class="row">
+                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                        <b>Chuyên Mục :</b>
+                          <select name="" id="">
+                            <option value="">--- Nổi Bật ---</option>
+                            <option value="">Tin Tức</option>
+                            <option value="">Thể Thao</option>
+                            <option value="">Du Lịch</option>
+                            <option value="">Giáo Dục</option>
+                            <option value="">Pháp Luật</option>
+                          </select>
+                    </div>
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                        <button type="button" class="btn btn-success">Lọc</button>
+                    </div>
+                </div>
+
+                <div class="row chon">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="row">
+                           <input name="Vnexpress.net" type="checkbox" value="Vnexpress.net" />Vnexpress.net
+                        </div>
+
+                        <div class="row">
+                            <input name="baomoi.com" type="checkbox" value="baomoi.com" />baomoi.com
+                        </div>
+                     
+                        <div class="row">
+                            <input name="vietnamnet.vn" type="checkbox" value="vietnamnet.vn" />vietnamnet.vn
+                        </div>
+
+                        <div class="row">
+                             <input name="Thanhnien.vn" type="checkbox" value="Thanhnien.vn" />Thanhnien.vn
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                         <div class="row">
+                            <input name="24h.com.vn" type="checkbox" value="24h.com.vn" />24h.com.vn
+                         </div>
+                         <div class="row">
+                              <input name="dantri.com.vn" type="checkbox" value="dantri.com.vn" />dantri.com.vn
+                         </div>
+                         
+                         <div class="row">
+                              <input name="tuoitre.vn" type="checkbox" value="tuoitre.vn" />tuoitre.vn
+                         </div>
+                        
+                        <div class="row">
+                             <input name="saostar.vn" type="checkbox" value="saostar.vn" />saostar.vn
+                        </div>
+                    </div>     
+                </div>                                       
+              </form>
+          </div>
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+              <table border="2px" >
+                <tr class="tieude" style="background: #5cb85c; color: #fff">
+                  <th style="text-align: center; width: 35px">STT</th>
+                  <th style="text-align: center; width: 100px">Trang</th>
+                  <th style="text-align: center; width: 210px">Tiêu Đề</th>
+                  <th style="text-align: center; width: 210px">Content</th> 
+                  <th style="text-align: center; width: 100px">Img</th>
+                  <th style="text-align: center; width: 100px">Link</th>
+                  <th style="text-align: center; width: 100px">Thời Gian</th>
+                </tr>
+                <tr style="text-align: center;">
+                  <td>1</td>
+                  <td>tuoitre.vn</td>
+                  <td>Điểm tin sáng 7-5: Juventus cần thêm 1 điểm để vô địch Serie A</td>
+                  <td>đội xếp thứ 2 Napoli đã để Torino cầm chân 2-2 trên sân nhà ở vòng 36 Giải vô địch Ý (Serie A).
+                  </td>
+                  <td>​hình ảnh </td>
+                  <td>​Link </td>
+                  <td>​6/5/2018 </td>
+                </tr>
+
+                
+              </table>
+          </div>
+      </div>
+      
+  </div>
+
+
+   
+
+ 
+
+	
+</body>
+</html>
+
+<!-- tuoitre.vn
+24h.com.vn
+Vnexpress.net
+thethaovanhoa.vn
+dantri.com.vn
+doisongphapluat.com
+baomoi.com
+vietnamnet.vn
+saostar.vn
+Thanhnien.vn -->
+
+
+
+
