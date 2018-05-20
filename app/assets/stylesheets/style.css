@@ -1,0 +1,33 @@
+.title {
+    color: #fff;
+    text-align: center;
+    background: #5cb85c;
+    min-height: 60px;
+    }
+ .tochoose{
+      border-radius: 11px;
+      border: 1px solid;
+    }
+ .row.chon {
+    margin-top: 10px;
+    margin-left: 10px;
+   }
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+.title-main{
+    margin-top: 10px;
+  }
+ b.page {
+    margin-left: 10px;
+}
+.content{
+  font-size: 13px;
+  color: #4cae4c;
+}
