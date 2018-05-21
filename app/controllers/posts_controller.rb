@@ -3,6 +3,7 @@ require_relative "News/getNews"
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   @@crawData=[]
+  @@category=''
   # GET /posts
   # GET /posts.json
   def index
@@ -31,6 +32,7 @@ class PostsController < ApplicationController
     @pages=params[:pages]
     @quantity=params[:quantity].to_i
 
+
     arr=['vnexpress','dantri', 'thanhnien','nhandan','laodong','tuoitre','vtc']
     if @category
       @pages.each{ |p|
@@ -51,19 +53,34 @@ class PostsController < ApplicationController
 
 
   def article
-    @id=params[:id].to_i
-    @idArticle=@@crawData[@id]
-    @page=@idArticle[:page]
-    @link=@idArticle[:link]
-    @contentVerbose=@@newArticle.getContentVerbose(@page, @link)
-    
-    respond_to do |format|
-      puts "ID", @id
-      render :article1 , id: @id
-    end
-    
-  end
+    @id               =params[:id].to_i
+    @idArticle        =@@crawData[@id]
 
+    @image            =@idArticle[:img]
+    @page             =@idArticle[:page]
+    @link             =@idArticle[:link]
+    @content          =@idArticle[:content]
+    @contentVerbose   =@@newArticle.getContentVerbose(@page, @link)
+    @category         =@idArticle[:category]
+    @title            =@idArticle[:title]
+
+    @post             = Post.new()
+    @post[:title]     = @title
+    @post[:category]  = @category
+    @post[:page]      = @page
+    @post[:image]     = @image        
+    @post[:content]   = @content
+    @post[:contentVerbose] = @contentVerbose
+    @post[:page]      = @page
+    @post[:link]      = @link
+
+    #@posts = Post.all
+
+    puts "ID",@id
+    render :article, post:@post
+
+  end
+  
 
   # POST /posts
   # POST /posts.json
@@ -112,7 +129,7 @@ class PostsController < ApplicationController
 
   #   # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:category, :page, :title, :image, :link, :content)
+      params.require(:post).permit(:category, :page, :title, :image, :link, :content,:contentVerbose)
     end
 
     def craw_params

@@ -1,4 +1,7 @@
-<h1>THIS IS ARTICLE</h1>
+<h1>Đăng bài mới</h1>
 
 <h3>ID: <%=@id%> </h3>
 
+<%= render 'form', post: @post %>
+
+<%= link_to 'Back', posts_path %>

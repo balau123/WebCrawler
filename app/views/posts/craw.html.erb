@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 
-	<meta charset="UTF-8">
-	<title>Document</title>
+  <meta charset="UTF-8">
+  <title>Document</title>
    <%= stylesheet_link_tag "/app/asset/stylesheets/bootstrap.css" %>
    <%= stylesheet_link_tag "/app/asset/stylesheets/bootstrap.min.css" %>
   
@@ -58,19 +58,17 @@
       </div>
       <div class="row">
           <div class="title">
-         	    <h1 style="margin-top: 10px">
-           	      <marquee width="100%" behavior="alternate">
-           	        	XÂY DỰNG WEBCRAWLER BẰNG RAILS
-    					    </marquee>
-  				    </h1>
+              <h1 style="margin-top: 10px">
+                  <marquee width="100%" behavior="alternate">
+                      XÂY DỰNG WEBCRAWLER BẰNG RAILS
+                  </marquee>
+              </h1>
           </div>
       </div>
-    <button id="article" type="button" value="1" class="btn" onclick="article('1')">Đăng</button>
-    <a href=<%=article_path%> target="_blank" onclick="article('1')" >NEW</a>
-    
-    <br><%= link_to 'NEW', article1_path %>
-     <br><%= link_to 'NEW', article1_path %>
-    <br><%= link_to 'NEW', article1_path %>
+
+
+
+<div id="results"></div> 
 
       <div class="row">
           <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 tochoose">
@@ -79,7 +77,7 @@
                         <b>Chuyên Mục :</b>
                           <select name="category" id="category">
                             <%@n.category_Arr.each { |k,v| %>
-                              <option value=<%=k%> > <%=v%></option>
+                              <option value=<%=k%> ><%=v%></option>
                             <% } %>
                           </select>
                           <br><br>Số lượng/Page<input type="number" id="quantity" name="quantity" value="1" min="1" max="50">
@@ -131,4 +129,3 @@
   </div>
 </body>
 </html>
-

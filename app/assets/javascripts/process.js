@@ -28,16 +28,16 @@ $(document).ready(function() {
   pages=getListPages();
   path="/article";
     
-	$.ajax({
-	    method:'GET',
-	    url: '/craw',
-	    dataType: "json",
-	    data: {category:category ,quantity:quantity, pages:pages},
+  $.ajax({
+      method:'GET',
+      url: '/craw',
+      dataType: "json",
+      data: {category:category ,quantity:quantity, pages:pages},
       success:function(data){
         $('#loading').html("");
         drawCrawlerTable(data,path);
       }
-	  });
+    });
   });
 
   //new Article button
@@ -80,8 +80,11 @@ function article(id)
 
 function drawButton(v,path){
  //s=`<button id="article" type="button" value="`+v+`" class="btn" onclick="article(`+v+`)">Đăng</button>`;
- //s=`<a value='`+v+`' href="`+path+`">NEW</a>`;
- s=`<a href=`+path+` target="_blank" onclick="article('`+v+`')" >NEW</a>`;
+//s=`<a value='`+v+`' target="_blank" href="`+path+`">NEW</a>`;
+s=`<form action="/article" method="get" target="_blank">
+  <input name ='id' value='`+v+`' hidden> 
+  <input type="submit" value="Post">
+  </form>`;
   return s;
 }
 

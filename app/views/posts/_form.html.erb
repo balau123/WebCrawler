@@ -1,45 +1,72 @@
-<%= form_with(model: post, local: true) do |form| %>
-  <% if post.errors.any? %>
+
+<%= form_with(model: @post, local: true) do |form| %>
+  <% if @post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
       <ul>
-      <% post.errors.full_messages.each do |message| %>
+      <% @post.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category %>
-  </div>
 
-  <div class="field">
-    <%= form.label :page %>
-    <%= form.text_field :page %>
-  </div>
+<table>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+  <tr>
+    <div class="field">
+    <th> Danh Muc</th>
+    <td><%= form.text_field :category %></td>
+    </div>
+  </tr>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image %>
-  </div>
 
-  <div class="field">
-    <%= form.label :link %>
-    <%= form.text_field :link %>
-  </div>
+  <tr>
+    <div class="field">
+    <th>Trang</th>
+     <td><%= form.text_area :page ,cols: 50, rows: 5 %></td>
+     </div>
+  </tr>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
+   <tr>   
+    <div class="field">
+    <th>Tieu de</th>
+     <td><%= form.text_area :title ,cols: 50, rows: 5 %></td>
+     </div>
+   </tr>   
+
+    <tr>
+      <div class="field">
+    <th>Hinh Anh</th>
+     <td><%= form.text_area :image ,cols: 50, rows: 5 %></td>
+     <td> <img src=<%=@post[:image] %>></td>
+     </div>
+
+
+   </tr>   
+<div class="field">
+    <th>Lien ket</th>
+     <td><%= form.text_area :link ,cols: 50, rows: 5 %></td>
+     </div>
+   </tr>   
+
+
+   <tr>   
+<div class="field">
+    <th>Mo ta</th>
+     <td><%= form.text_area :content ,cols: 100, rows: 10 %></td>
+     </div>
+   </tr>   
+
+
+   <tr>   
+<div class="field">
+    <th>Noi Dung</th>
+     <td><%= form.text_area :contentVerbose ,cols: 100, rows: 30 %></td>
+   </tr> 
+ </table>
 
   <div class="actions">
     <%= form.submit %>

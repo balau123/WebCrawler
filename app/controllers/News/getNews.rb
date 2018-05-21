@@ -58,18 +58,21 @@ class GetNews
 				@rss_results
 			ensure
 				@recv.each do |result|
-				  	d=result.description
-					image=d.match(/src(.*)(?:jpg|jpeg|gif|png)"/)
-					if image				  	
-				  	image=image[0].sub("src=","").gsub('"','')
+					if result.nil?
 					else
-						image=""
+					  	d=result.description
+						image=d.match(/src(.*)(?:jpg|jpeg|gif|png)"/)
+						if image				  	
+					  	image=image[0].sub("src=","").gsub('"','')
+						else
+							image=""
+						end
+						title=result.title
+						content= getContent(_page,d)
+					  	@r = {category:_category, page: _page,title: result.title, date: result.pubDate, link: result.link, content: content, img: image }
+					  	@rss_results.push(@r)
+						@trend=title.split.inject(@trend) { |k,v|   k[v] += 1 ; k }
 					end
-					title=result.title
-					content= getContent(_page,d)
-				  	@r = { page: _page,title: result.title, date: result.pubDate, link: result.link, content: content, img: image }
-				  	@rss_results.push(@r)
-					@trend=title.split.inject(@trend) { |k,v|   k[v] += 1 ; k }
 				end
 			end
     end
