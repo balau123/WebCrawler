@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Index</title>
+<%= stylesheet_link_tag "application.css" %>
+<%= javascript_include_tag "application.js" %>
+  
+</head>
+<body> 
+    <section>
+	    <div class="row">
+           <div id="carousel-id" class="carousel slide" data-ride="carousel">
+	            <ol class="carousel-indicators">
+	               <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+	               <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+	               <li data-target="#carousel-id" data-slide-to="2" class="active">
+	               </li>
+	            </ol>
+            <div class="carousel-inner">
+               <div class="item">
+                  <%= image_tag("1.jpg",
+                    alt: "Image description here",
+                    class: "img-responsive") %>
+                  <div class="carousel-caption">
+                    <button type="button" class="btn btn-success">Ruby on Rails</button>
+                    <p class="rubyonrails">Ruby on Rails là một Framework mạnh mẽ và đầy thú vị được phát triển trên ngôn ngữ lập trình Ruby.</p>
+                  </div>
+            </div>
+            <div class="item">
+                    <%= image_tag("2.jpg",
+                    alt: "Image description here", 
+                    class: "img-respponsive") %>
+                <div class="carousel-caption">
+                    <button type="button" class="btn btn-primary">Ruby on Rails</button>
+                      <strong>
+                          <p class="ruby"> Ruby on Rails là một Framework mạnh mẽ và đầy thú vị được phát triển trên ngôn ngữ lập trình Ruby.</p>
+                      </strong>
+                </div>
+            </div>
+            <div class="item active">
+                 <%= image_tag("3.jpg",
+                alt: "Image description here", 
+                class: "img-respponsive") %>
+                <div class="carousel-caption">
+                  <button type="button" class="btn btn-success">Ruby</button>
+                    <p class="content">là một ngôn ngữ lập trình hướng đối tượng, có khả năng phản ứng. Ruby bị ảnh hưởng từ Ada và Perl với các đặc tính hướng đối tượng của Smalltalk, và cũng chia sẻ một số đặc tính với Python, Lisp, Dylan và CLU. Ruby là ngôn ngữ thông dịch đơn giai đoạn</p>
+                </div>
+               </div>
+            </div>
+             <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+             <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	    </div>
+    </section>
+     
+    <section class="mrT5">
+	    <nav class="navbar navbar-default container-fluid navbar-inverse" role="navigation">
+		    <div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="images/hii.png" alt="logo"></a>
+				</div>
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav navbar-right">
+					    <li><a  href="#">TRANG CHỦ </a></li>
+						<li><a  href="#">TIN TỨC</a></li>
+						<li><a  href="#">DU LỊCH</a></li>
+						<li><a  href="#">THỂ THAO </a></li>
+						<li><a  href="#">GIÁO DỤC</a></li>
+						<li><a  href="#">KINH DOANH</a></li>
+					</ul>
+				</div>
+	        </div>
+        </nav>
+    </section>
+
+    <section class="mrT5 container">
+        <div class="row">
+		    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			    <header class="grnBxTit">
+			        <h4>Tin Tức</h4>
+			    </header>
+			    <div class="grnBxCntGrn bx4Tbg">
+			    	<div class="clF pdB5"></div>
+		   			<div class="row">
+				        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				        	<span class="imgFltT4 imgNwsHm">
+		                        <a>
+		                           <img src="https://image.24h.com.vn/upload/2-2018/images/2018-05-11/thumbnail/1526025768-755-thumbnail.jpg" class="width-100 initial loaded">                
+		                        </a>  
+				            </span>
+				        </div>
+		        		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+				            <header class="nwsTit">
+				                <a  href="https://www.24h.com.vn/thi-truong-24h/nguoi-tieu-dung-thong-minh-hon-trong-viec-lua-chon-thiet-bi-lam-mat-c341a959008.html" >Người tiêu dùng thông minh hơn trong việc lựa chọn thiết bị làm mát</a>
+				            </header>
+		        		</div>
+					</div>
+		    
+		            <div class="row news">
+				        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				        	<span class="imgFltT4 imgNwsHm">
+				                <a>
+				                    <img src="https://image.24h.com.vn/upload/2-2018/images/2018-05-14/thumbnail/1526271397-14-thumbnail.jpg"  class="width-100 loaded">
+				                </a>  
+				            </span>
+				        </div>
+				        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			                <header class="nwsTit">
+			                    <a  title="Hội nghị Dầu Gạo Quốc tế lần thứ 5 tổ chức tại Việt Nam">Hội nghị Dầu Gạo Quốc tế lần thứ 5 tổ chức tại Việt Nam</a>
+			                </header>
+				        </div>
+		            </div>
+		       
+		            <div class="row news">
+		            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		            		<span class="imgFltT4 imgNwsHm">
+		                        <a href="">
+		                            <img src="https://image.24h.com.vn/upload/2-2018/images/2018-05-15/thumbnail/bat-dong-san-ho-tay-av-1526348867-737-width640height480.jpg" alt="BĐS Hồ Tây trong mắt người nước ngoài" class="width-100 loaded">
+		                        </a>  
+		                    </span>
+		            	</div>
+		            	<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			                <header class="nwsTit">
+			                    <a  href="https://www.24h.com.vn/tin-tai-chinh-nha-dat-bds/bds-ho-tay-trong-mat-nguoi-nuoc-ngoai-c679a959809.html" title="BĐS Hồ Tây trong mắt người nước ngoài">BĐS Hồ Tây trong mắt người nước ngoài</a>
+			                </header>
+		            	</div>
+		            </div>
+		            
+		            <div class="row news">
+		            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		            	 	<span class="imgFltT4 imgNwsHm">
+		                    	<a>
+		                        	<img src="https://image.24h.com.vn/upload/2-2018/images/2018-05-07/thumbnail/untitled-1-1525687216-286-width640height480.jpg"   class="width-100 loaded" >
+		                        </a>  
+		                   </span>
+		            	</div>
+		            	<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			                <header class="nwsTit">
+			                    <a  href="https://www.24h.com.vn/tin-tuc-suc-khoe/canh-bao-nguy-hiem-khon-luong-khi-nguoi-tre-cao-huyet-ap-c683a958014.html" title="Cảnh báo: Nguy hiểm khôn lường khi người trẻ cao huyết áp">Cảnh báo: Nguy hiểm khôn lường khi người trẻ cao huyết áp</a>
+			                </header>
+		            	</div>
+		            </div>
+		            <div class="clear"></div>
+		        </div>        
+		    </div> 
+		    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+		        <div class="title_new_box">TRAVEL</div>
+                <div class="row">
+	          	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	          	    	 <a href="" title="bến thuyền tràng an">
+	          	    	 	 <img src="images/Ben_thuyen_Trang_An.jpg" width="300px" height="190"  alt="bến thuyền tràng an">
+	          	    	 </a>
+	          	    	 <p class="tieudecon">
+	          	    	 	 <b><a href="" title="khu du lịch sinh thái tràng an ">Khu du lịch sinh thái Tràng An</a></b>
+	          	    	 </p> 
+      	    	    </div>
+    	    	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	          	    	 <a href="" title="bến thuyền tràng an">
+	          	    	 	 <img src="images/RNJB7YVJE_16.jpg" width="300px" height="190px" alt="thiên nhiên vân long ">
+	          	    	 </a>
+	          	    	 <p class="tieudecon">
+	          	    	 	<b><a href="" title="thiên nhiên vân long ">Khu Bảo tồn Thiên Nhiên Vân Long</a></b>
+	          	    	 </p>
+      	    	    </div>
+
+					<div class="col-md-6 col-sm-6 col-xs-12 col-dest">
+                    	<div class="li_tour_dest">
+        					<a href="ninhbinh-attractions/Tam-coc.html" class="a_tour_dest">Khu du lịch Tam Cốc - Bích Động</a>
+        				</div>
+        			</div>
+							
+					<div class="col-md-6 col-sm-6 col-xs-12 col-dest">
+                    	<div class="li_tour_dest">
+        					<a href="ninhbinh-attractions/Nha-tho-da-Phat-Diem-Noi-hoi-tu-phong-cach-kien-truc-Dong-Tay.html" class="a_tour_dest">  Nhà thờ đá Phát Diệm - Nơi hội tụ phong cách kiến trúc Đông - Tây</a>
+        				</div>
+        			</div>
+
+        			<div class="col-md-6 col-sm-6 col-xs-12 col-dest">
+                    	<div class="li_tour_dest">
+        					<a href="ninhbinh-attractions/Dong-Thien-Ha-diem-nhan-cua-du-lich-hang-dong-o-Ninh-Binh.html" class="a_tour_dest">Khu du lịch sinh thái Động Thiên Hà - Dải ngân hà trong lòng núi</a>
+		                </div>
+		            </div>
+
+		           <div class="col-md-6 col-sm-6 col-xs-12 col-dest">
+                    	<div class="li_tour_dest">
+        					<a href="ninhbinh-attractions/Khu-du-lich-sinh-thai-Vuon-Chim-Thung-Nham.html" class="a_tour_dest">Khu du lịch sinh thái Vườn Chim Thung Nham</a>
+        				</div>
+        			</div>
+
+        			<div class="col-md-6 col-sm-6 col-xs-12 col-dest">
+                    	<div class="li_tour_dest">
+        					<a href="ninhbinh-attractions/Chua-Bich-Dong.html" class="a_tour_dest">Chùa Bích Động </a>
+        				</div>
+        			</div>
+
+        			 <div class="col-md-6 col-sm-6 col-xs-12 col-dest">
+                    	<div class="li_tour_dest">
+        					<a href="ninhbinh-attractions/Chua-Bai-Dinh.html" class="a_tour_dest">Chùa Bái Đính</a>
+        				</div>
+        			</div>
+ 		        </div>
+		    </div>  
+	    </div>
+    </section>
+   	    
+    <section class="bxDn mrT5 container">
+        <div class="row">
+		    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		    	<header class="grnBxTit"><h4>Doanh Nhân</h4></header>
+		    	    <div class="grnBxCntGrn bxDnh">
+				    	<div class="clF pdB10"></div>
+					    <div class="row ">
+					    	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					    	 	<span class="imgFlt imgNwsSml">
+					                <a href="https://www.24h.com.vn/tai-chinh-bat-dong-san/hanh-trinh-mark-zuckerberg-dua-facebook-thong-tri-the-gioi-c161a960007.html">
+					                    <img src="https://image.24h.com.vn/upload/2-2018/images/2018-05-15/thumbnail/1526381787-525-152638164619466-thumbnail.jpg"  class="width-100 initial loaded" > 
+					                </a>           
+		            			</span>
+					    	</div>
+					    	<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+					    		<header class="nwsTit">
+		            	           <a href="https://www.24h.com.vn/tai-chinh-bat-dong-san/hanh-trinh-mark-zuckerberg-dua-facebook-thong-tri-the-gioi-c161a960007.html" >Hành trình Mark Zuckerberg đưa Facebook thống trị thế giới
+		            	           </a>
+		            	        </header>
+		            	        Hiện nay, Facebook đã có giá trị khoảng 536 tỷ đô la và có hơn 2,2 tỷ người sử...            
+		            	        <div class="clF pdB10"></div>
+					    	</div>
+					    </div>
+
+		                <div class="lstNws">
+		                    <article class="lstNml">
+			                    <span class="icoSpites"></span>
+			                    <a href="https://www.24h.com.vn/tai-chinh-bat-dong-san/can-canh-khu-dat-vang-so-8-12-le-duan-vua-duoc-kien-nghi-thu-hoi-c161a959949.html" >Cận cảnh khu đất "vàng" số 8-12 Lê Duẩn vừa được kiến nghị thu hồi</a>
+		                    </article>
+		                     <article class="lstNml">
+		                     	<span class="icoSpites"></span>
+		                     	<a  href="https://www.24h.com.vn/tai-chinh-bat-dong-san/8-cau-chuyen-truyen-cam-hung-tu-ty-phu-jack-ma-c161a959829.html" >8 câu chuyện truyền cảm hứng từ tỷ phú Jack Ma</a></article>
+		                    <article class="lstNml">
+		                    	<span class="icoSpites"></span>
+		                    	<a  href="https://www.24h.com.vn/tai-chinh-bat-dong-san/tu-tho-rua-xe-den-ong-trum-so-huu-de-che-ty-do-marvel-avengers-c161a959622.html" >Từ thợ rửa xe đến ông trùm sở hữu đế chế tỷ đô Marvel 'Avengers'</a>
+		                    </article>
+		                    <article class="lstNml">
+		                    	<span class="icoSpites"></span>
+		                    	<a  href="https://www.24h.com.vn/tai-chinh-bat-dong-san/hon-32000-ty-dong-no-thue-troi-theo-nguoi-chet-nguoi-mat-tich-c161a958795.html" >Hơn 32.000 tỷ đồng nợ thuế “trôi” theo người chết, người mất tích?</a>
+		                    </article>
+		                </div>  
+		            </div>
+		    </div>
+		    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+	    	    <div class="box_dest">
+					<div class="title_new_box">SPORT</div>
+					<div class="row">
+				 		<div class="col-xs-6 col-sm-6 sport">
+				 			<a href="">Chung kết C1: Liverpool giá trị hơn đứt dàn SAO Real, Ronaldo "hít khói" Salah </a><br>
+						  	<img src="images/bongda.jpg" class="img_hotel_index" alt="icon10">
+				  			
+				  		 	<p>Liverpool mới là đội bóng được định giá về giá trị đội hình cao hơn Real Madrid.</p>
+				 		</div>
+				 		<div class="col-xs-6 col-sm-6 sport">
+				 			<a href="">Chung kết C1: Liverpool giá trị hơn đứt dàn SAO Real, Ronaldo "hít khói" Salah </a><br>
+						  	<img src="images/bongda.jpg" class="img_hotel_index" alt="icon10">
+				  			
+				  		 	<p>Liverpool mới là đội bóng được định giá về giá trị đội hình cao hơn Real Madrid.</p>
+				 		</div>
+
+				 		<div class="col-xs-6 col-sm-6 sport">
+				 			<a href="">Chung kết C1: Liverpool giá trị hơn đứt dàn SAO Real, Ronaldo "hít khói" Salah </a><br>
+						  	<img src="images/bongda.jpg" class="img_hotel_index" alt="icon10">
+				  			
+				  		 	<p>Liverpool mới là đội bóng được định giá về giá trị đội hình cao hơn Real Madrid.</p>
+				 		</div>
+				 		<div class="col-xs-6 col-sm-6 sport">
+				 			<a href="">Chung kết C1: Liverpool giá trị hơn đứt dàn SAO Real, Ronaldo "hít khói" Salah </a><br>
+						  	<img src="images/bongda.jpg" class="img_hotel_index" alt="icon10">
+				  			
+				  		 	<p>Liverpool mới là đội bóng được định giá về giá trị đội hình cao hơn Real Madrid.</p>
+				 		</div>
+				 	</div> 
+	    	    </div>
+		    </div>
+        </div>
+    </section> 
+
+    <section class="mrT5 container">
+	    <div class="row">
+	    	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+	    	 	<div class="box_rss_6_rss24h">
+					<section>
+						<div class="box_rss_6_rss24hTop">
+						  <a title="ẨM THỰC" href="#" target="_top">ẨM THỰC</a>
+						</div>
+						<div class="box_rss_6_rss24hCnt">
+						    <div class="lstNws">
+								<article class="lstNml">
+									<a href="#">
+										29 sự thật thú vị về bia khiến bất cứ ai cũng ngạc nhiên
+									</a>
+									<span class="icoNws"></span>
+								</article>
+
+								<article class="lstNml">
+								<a href="#">
+									10 thực phẩm có thể gây chết người có ngay trong căn bếp nhà...
+								</a><span class="icoNws"></span>
+								</article>
+
+								<article class="lstNml">
+								<a href="#">
+									Nắng nóng thế này, mang thịt đi phơi làm ba chỉ một nắng thì...
+								</a>
+								<span class="icoNws"></span>
+								</article>
+
+								<article class="lstNml">
+								<a href="#">
+									Rợn tóc gáy thưởng thức đặc sản mối xào lá lốt của người...
+								</a>
+								</article>
+							</div>
+						</div>
+					</section>
+		<!--@quang_cao_dfp_half2@-->
+					<section>
+						<div class="box_rss_6_rss24hTop">
+							<a href="#">TIỀN - CHỨNG KHOÁN</a>
+						</div>
+						<div class="box_rss_6_rss24hCnt">
+							<div class="lstNws">
+								<article class="lstNml">
+								<a href="#">Nghề “hot” mùa hè: Nghề thu trăm triệu trong 3 tháng hè</a><span class="icoNws"></span>
+								</article>
+
+								<article class="lstNml">
+								   <a href="#" >
+									Báo Tây xuýt xoa khen nhà 3 tầng kiểu hộp trượt độc lạ ở...
+								   </a>
+								   <span class="icoNws"></span>
+								</article>
+
+								<article class="lstNml">
+								<a href="#">
+									'Siết' lại hoạt động cho vay tiêu dùng
+								</a>
+								<span class="icoNws"></span>
+								</article>
+
+								<article class="lstNml">
+								<a href="#">
+										Ai trục lợi từ khu đất ‘vàng’ ở trung tâm quận 1?
+								</a>
+								<span class="icoNws"></span>
+								</article>
+							</div>
+						</div>
+							<div class="box_rss_6_rss24hBottom"></div>
+					</section>
+				</div>
+	        </div>
+
+	    	<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+	    	 	<div class="title_new_box">EDUCATION</div>
+					<div class="row">
+				 		<div class="col-xs-6 col-sm-6 education">
+						  	<img src="images/baithi.jpg" class="img_hotel_index" alt="icon10">
+				  			<a href="">Làm bài thi lớp 10 theo đề mở</a><br>
+				  		 	<p>Theo Sở Giáo dục và Đào tạo TP HCM, đề thi lớp 10 năm nay sẽ tiếp tục được ra..</p>
+				 		</div>
+
+				 		<div class="col-xs-6 col-sm-6 education">
+				  		   	<img src="images/baithi.jpg" class="img_hotel_index" alt="icon11">
+			  		 		<a href="">Làm bài thi lớp 10 theo đề mở</a>
+			  		 		<p>heo Sở Giáo dục và Đào tạo TP HCM, đề thi lớp 10 năm nay sẽ tiếp tục được ra..</p>
+				 		</div>
+
+				 		<div class="col-xs-6 col-sm-6 education">
+			  		  		<img src="images/baithi.jpg" class="img_hotel_index" alt="icon12">
+			  		 		<a href="">Làm bài thi lớp 10 theo đề mở</a>
+			  		 		<p>heo Sở Giáo dục và Đào tạo TP HCM, đề thi lớp 10 năm nay sẽ tiếp tục được ra..</p>
+				 		</div>
+
+				 		<div class="col-xs-6 col-sm-6 education">
+				  		 	<img src="images/baithi.jpg" class="img_hotel_index" alt="icon12">
+			  		 		<a href="">Làm bài thi lớp 10 theo đề mở</a>
+			  		 		<p>heo Sở Giáo dục và Đào tạo TP HCM, đề thi lớp 10 năm nay sẽ tiếp tục được ra..</p>	
+				 		</div>
+
+					</div>
+	    	</div>
+	    </div>
+    </section>
+
+    <section class=" mrT5 ">
+    	<nav class="ftMn1Contnr clF">			
+			<div class="ftMn1">
+                <ul class="grpIt">
+                    <li>
+					    <a href="#">
+					      <b title="Tin tức">Tin tức</b>
+					    </a>
+					</li>
+					<li>
+						<a href="#" title="Bóng đá">
+							<b title="Bóng đá">Bóng đá</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<b title="Thời trang">Thời trang</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<b>Pháp luật</b>
+						</a>
+						
+					</li>
+					<li>
+						<a href="#">
+							<b title="Hi-tech">Hi-tech</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						   <b title="Tài chính">Tài chính</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<b title="Làm đẹp">Làm đẹp</b>
+						</a>
+					</li>
+				    <li>
+						<a href="#">
+							<b title="Sức khỏe">Sức khỏe</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<b title="Sức khỏe">Du lịch</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<b title="Sức khỏe">Ẩm Thực</b>
+						</a>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</nav>
+    </section>
+
+</body>
+</html>

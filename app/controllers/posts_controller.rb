@@ -20,6 +20,17 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def posted
+  @post = Post.all
+  t=Post.where(category: "tintuc")
+  puts t
+    respond_to do |format|
+      format.html {}
+      format.js{}
+      format.json{render :json =>@@crawData}
+    end
+
+  end
 
   # GET /posts/1/edit
   def edit
@@ -27,13 +38,11 @@ class PostsController < ApplicationController
 
   def craw
     @n=GetNews.new()
-    @@newArticle=@n
-    @category=params[:category]
-    @pages=params[:pages]
-    @quantity=params[:quantity].to_i
-
-
-    arr=['vnexpress','dantri', 'thanhnien','nhandan','laodong','tuoitre','vtc']
+    @@newArticle      =@n
+    @category         =params[:category]
+    @pages            =params[:pages]
+    @quantity         =params[:quantity].to_i
+    
     if @category
       @pages.each{ |p|
       @n.craw(p,@category,@quantity)

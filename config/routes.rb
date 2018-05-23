@@ -4,6 +4,7 @@ resources :posts
 #root to: 'articles#index'
 get '/craw'    => 'posts#craw'
 get '/article'    => 'posts#article'
+get '/posted'    => 'posts#posted'
 get '/article1'    => 'posts#article1'
 #get '/show'    => 'posts#index'
 get '/new'    => 'posts#new'

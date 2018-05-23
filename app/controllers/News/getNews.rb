@@ -34,8 +34,8 @@ class GetNews
 		}
 
 		@parse={
-		'vnexpress' => '//article//p[@class="Normal"]',
-		#'vnexpress' => '//article[@class="content_detail fck_detail width_common block_ads_connect"]',
+		#'vnexpress' => '//article//p[@class="Normal"]',
+		'vnexpress' => '//article[@class="content_detail fck_detail width_common block_ads_connect"]',
 		
 		'thanhnien' => '//div[@id="main_detail"]//div',
 		'laodong' 	=> '//div[@class="article-content"]',
