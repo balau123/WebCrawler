@@ -12,10 +12,10 @@ page = agent.get(podcast_url)
 html = Nokogiri::HTML(page.body)
 
 
- content_vnexpress = html.xpath('//article//p[@class="Normal"]').text
+content_vnexpress = html.xpath('//article//p[@class="Normal"]').text
  
- content_thanhnien = html.xpath('//div[@id="main_detail"]//div').text
-  content_thanhnien = html.xpath('//div[@id="abody"]//div[@class="details__morenews"]').text
+content_thanhnien = html.xpath('//div[@id="main_detail"]//div').text
+content_thanhnien = html.xpath('//div[@id="abody"]//div[@class="details__morenews"]').text
  
  content_laodong = html.xpath('//div[@class="article-content"]').text
  content_tuoitre = html.xpath('//div[@class="fck"]//p').text

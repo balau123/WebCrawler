@@ -17,8 +17,8 @@
 
   <tr>
     <div class="field">
-    <th> Danh Muc</th>
-    <td><%= form.text_field :category %></td>
+    <th> Danh Mục</th>
+    <td><%= form.text_field :category ,:disabled=>true %></td>
     </div>
   </tr>
 
@@ -26,20 +26,20 @@
   <tr>
     <div class="field">
     <th>Trang</th>
-     <td><%= form.text_area :page ,cols: 50, rows: 5 %></td>
+     <td><%= form.text_field :page ,:disabled=>true %></td>
      </div>
   </tr>
 
    <tr>   
     <div class="field">
-    <th>Tieu de</th>
+    <th>Tiêu đề</th>
      <td><%= form.text_area :title ,cols: 50, rows: 5 %></td>
      </div>
    </tr>   
 
     <tr>
       <div class="field">
-    <th>Hinh Anh</th>
+    <th>Hình Ảnh</th>
      <td><%= form.text_area :image ,cols: 50, rows: 5 %></td>
      <td> <img src=<%=@post[:image] %>></td>
      </div>
@@ -47,7 +47,7 @@
 
    </tr>   
 <div class="field">
-    <th>Lien ket</th>
+    <th>Liên kết</th>
      <td><%= form.text_area :link ,cols: 50, rows: 5 %></td>
      </div>
    </tr>   
@@ -55,7 +55,7 @@
 
    <tr>   
 <div class="field">
-    <th>Mo ta</th>
+    <th>Mô tả</th>
      <td><%= form.text_area :content ,cols: 100, rows: 10 %></td>
      </div>
    </tr>   
@@ -63,7 +63,7 @@
 
    <tr>   
 <div class="field">
-    <th>Noi Dung</th>
+    <th>Nội Dung</th>
      <td><%= form.text_area :contentVerbose ,cols: 100, rows: 30 %></td>
    </tr> 
  </table>
