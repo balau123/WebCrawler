@@ -1,0 +1,12 @@
+<h1>Xem bai viet</h1>
+
+    <% Post.where(id: @id).each {|t| %>
+    <h1><%= t.category %></h1>
+    <h2><%= t.title %></h2>
+      <h2><%= t.content %></h2>  
+        <p><%= t.contentVerbose %></p>
+        
+        <%= image_tag(t.image,size: "120x100", :alt => t.title) %>
+    <% } %>
+
+<br>

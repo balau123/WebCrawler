@@ -22,15 +22,16 @@ class PostsController < ApplicationController
 
   def posted
   @post = Post.all
-  t=Post.where(category: "tintuc")
-  puts t
-    respond_to do |format|
-      format.html {}
-      format.js{}
-      format.json{render :json =>@@crawData}
-    end
 
   end
+
+  def postedinfo
+  @id=params[:id].to_i
+  puts "ID", @id
+  puts "Path" ,postedinfo_path(@id)
+
+  end
+
 
   # GET /posts/1/edit
   def edit
@@ -88,6 +89,7 @@ class PostsController < ApplicationController
     puts "ID",@id
     render :article, post:@post
 
+
   end
   
 
@@ -136,9 +138,17 @@ class PostsController < ApplicationController
        @post = Post.find(params[:id])
      end
 
+     def set_postedinfo
+       @post = Post.find(params[:id])
+     end
+
   #   # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:category, :page, :title, :image, :link, :content,:contentVerbose)
+    end
+
+    def postedinfo_params
+      params.require(:postedinfo).permit(:id)
     end
 
     def craw_params
