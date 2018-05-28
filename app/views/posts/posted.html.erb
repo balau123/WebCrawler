@@ -90,7 +90,7 @@
 			    <div class="grnBxCntGrn bx4Tbg">
 			    	<div class="clF pdB5"></div>
 
-			    	<%Post.where(category: "tintuc").each {|t| %>
+			    	<%Post.where(category: "tintuc").limit(@limit).order('created_at desc').each {|t| %>
 		   			<div class="row">
 		   			
 				        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
@@ -114,7 +114,7 @@
 		    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 		        <div class="title_new_box">DU LICH</div>
 
-			<%Post.where(category: "dulich").each {|t| %>		        
+			<%Post.where(category: "dulich").limit(@limit).order('created_at desc').each {|t| %>		        
                 <div class="row">
 	          	    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 	          	    	 	<%= image_tag(t[:image],size: "120x100", :alt => t[:title]) %>
@@ -140,7 +140,7 @@
 		    	<header class="grnBxTit"><h4>Kinh doanh</h4></header>
 		    	    <div class="grnBxCntGrn bxDnh">
 				    	<div class="clF pdB10"></div>
-						<%Post.where(category: "kinhdoanh").each {|t| %>	
+						<%Post.where(category: "kinhdoanh").limit(@limit).order('created_at desc').each {|t| %>	
 					    <div class="row ">
 					    	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
@@ -170,7 +170,7 @@
 		    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 	    	    <div class="box_dest">
 					<div class="title_new_box">Thể thao</div>
-					<%Post.where(category: "thethao").each {|t| %>		 
+					<%Post.where(category: "thethao").limit(@limit).order('created_at desc').each {|t| %>		 
 					<div class="row">
 				 		<div class="col-xs-6 col-sm-6 sport">
 				 			<a>
@@ -198,7 +198,7 @@
 						</div>
 						<div class="box_rss_6_rss24hCnt">
 						    <div class="lstNws">
-							<%Post.where(category: "khoahoc").each {|t| %>
+							<%Post.where(category: "khoahoc").limit(@limit).order('created_at desc').each {|t| %>
 								<article class="lstNml">
 									<a>
 										<%= link_to t[:title],    postedinfo_path(t[:id]) %>
@@ -221,7 +221,7 @@
 	    	<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 	    	 	<div class="title_new_box">Giáo dục</div>
 					<div class="row">
-						<%Post.where(category: "giaoduc").each {|t| %>
+						<%Post.where(category: "giaoduc").limit(@limit).order('created_at desc').each {|t| %>
 				 		<div class="col-xs-6 col-sm-6 education">
 						  	<%= image_tag(t[:image],size: "120x100", :alt => t[:title]) %>
 				  			<a> <%= link_to t[:title],  postedinfo_path(t[:id])%></a><br>
