@@ -5,14 +5,11 @@ resources :posts
 get '/craw'    => 'posts#craw'
 get '/article'    => 'posts#article'
 get '/posted'    => 'posts#posted'
-get '/article1'    => 'posts#article1'
-#get '/show'    => 'posts#index'
+get '/postedinfo/:id', to:  'posts#postedinfo', as: 'postedinfo'
 get '/new'    => 'posts#new'
-get '/posts/new1', to: 'posts#new1', as: 'new1_post'
-
- #get 'articles/new'
- #get 'articles/create'
-
+#get '/posts/new1', to: 'posts#new1', as: 'new1_post'
+#get 'articles/new'
+#get 'articles/create'
 
 
 end
