@@ -22,6 +22,7 @@ class PostsController < ApplicationController
 
   def posted
   @post = Post.all
+  @limit=5
 
   end
 

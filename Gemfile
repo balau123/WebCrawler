@@ -56,3 +56,4 @@ gem 'mechanize'
   gem 'byebug'
   gem 'rspec-rails', '~> 3.7.2'
 end
+gem 'jquery-rails'
