@@ -1,4 +1,150 @@
-<p id="notice"><%= notice %></p>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Document</title>
+   <%= stylesheet_link_tag "/app/asset/stylesheets/bootstrap.css" %>
+   <%= stylesheet_link_tag "/app/asset/stylesheets/bootstrap.min.css" %>
+   <%= stylesheet_link_tag "/app/asset/stylesheets/style.css" %>
+  
+  <%= javascript_include_tag "/app/asset/javascripts/jquery.min.js", "data-turbolinks-track" => true  %>
+  <%= javascript_include_tag "/app/asset/javascripts/process.js", "data-turbolinks-track" => true  %>
+
+  <%= javascript_include_tag "/app/asset/javascripts/bootstrap.min.js", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "/app/asset/javascripts/jquery_menu.js", "data-turbolinks-track" => true  %>
+  <%= javascript_include_tag "/app/asset/javascripts/jquery_min.js", "data-turbolinks-track" => true  %>
+
+</head>
+<body> 
+  <section class="container">
+    <div class="row">
+       <div id="carousel-id" class="carousel slide" data-ride="carousel">
+         <ol class="carousel-indicators">
+           <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+           <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+           <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+         </ol>
+         <div class="carousel-inner">
+           <div class="item">
+              <%= image_tag("1.jpg",
+                alt: "Image description here",
+                class: "img-responsive") %>
+              <div class="carousel-caption">
+                <button type="button" class="btn btn-success">Ruby on Rails</button>
+                <p class="rubyonrails">Ruby on Rails là một Framework mạnh mẽ và đầy thú vị được phát triển trên ngôn ngữ lập trình Ruby.</p>
+              </div>
+           </div>
+           <div class="item">
+                <%= image_tag("2.jpg",
+                alt: "Image description here", 
+                class: "img-respponsive") %>
+              <div class="carousel-caption">
+                <button type="button" class="btn btn-success">Ruby</button>
+                  <p class="content"> là một ngôn ngữ lập trình hướng đối tượng, có khả năng phản ứng. Ruby bị ảnh hưởng từ Ada và Perl với các đặc tính hướng đối tượng của Smalltalk, và cũng chia sẻ một số đặc tính với Python, Lisp, Dylan và CLU. Ruby là ngôn ngữ thông dịch đơn giai đoạn.</p>
+              </div>
+           </div>
+           <div class="item active">
+                 <%= image_tag("3.jpg",
+                alt: "Image description here", 
+                class: "img-respponsive") %>
+                <div class="carousel-caption">
+                 <button type="button" class="btn btn-primary">Ruby on Rails</button>
+              <strong>
+                <p class="ruby"> Ruby on Rails là một Framework mạnh mẽ và đầy thú vị được phát triển trên ngôn ngữ lập trình Ruby.</p> 
+              </strong>
+                </div>
+           </div>
+         </div>
+         <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+         <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+       </div>
+    </div>
+  </section>
+
+  <section class="container">
+     <div class="row">
+          <div class="title">
+              <h1 style="margin-top: 10px">
+                  <marquee width="100%" behavior="alternate">
+                      XÂY DỰNG WEBCRAWLER BẰNG RAILS
+                  </marquee>
+              </h1>
+          </div>
+      </div>
+  </section>
+
+  <section class="container">
+      <div class="row">
+        <p id="notice"><%= notice %></p>
+          <table border="2px" >
+            <tr class="tieude" style="background: #78b43d; color: #fff">
+              <th style="text-align: center; width: 35px">
+                  <strong>Category</strong>
+              </th>
+              <th style="text-align: center; width: 35px">
+                  <strong>Trang</strong>
+              </th>
+              <th style="text-align: center; width: 40px">
+                  <strong>Tiêu Đề</strong>
+              </th>
+              <th style="text-align: center; width: 40px">
+                  <strong>Img</strong>
+              </th>
+              <th style="text-align: center; width: 50px">
+                  <strong>Link</strong>
+              </th>
+              <th style="text-align: center; width: 110px">
+                  <strong>Content</strong>
+              </th> 
+              <th style="text-align: center; width: 500px">
+                  <strong>ContentVerbose</strong>
+              </th> 
+              <th rowspan="1" colspan="2" style="text-align: center; width: 100px">
+                <strong>Action</strong>
+              </th>
+            </tr>
+            <tr style="text-align: center;">
+              <td><%= @post.category %></td>
+              <td><%= @post.page %></td>
+              <td><%= @post.title %></td>
+              <td>​<%= @post.image %></td>
+              <td>​<%= @post.link %></td>
+              <td>​<%= @post.content %></td>
+              <td>​<<%= @post.contentVerbose %></td>
+              <td><%= link_to 'Edit', edit_post_path(@post),class:'btn-success' %></td> 
+              <td><%= link_to 'Back', posts_path ,class:'btn-danger' %></td>
+            </tr>
+          </table> 
+      </div>
+  </section>
+  
+
+
+</body>
+</html>
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Category:</strong>
@@ -36,4 +182,4 @@
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Back', posts_path %> -->
