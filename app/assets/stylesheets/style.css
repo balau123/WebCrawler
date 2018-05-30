@@ -1,33 +1,320 @@
-.title {
-    color: #fff;
-    text-align: center;
-    background: #5cb85c;
-    min-height: 60px;
-    }
- .tochoose{
-      border-radius: 11px;
-      border: 1px solid;
-    }
- .row.chon {
-    margin-top: 10px;
-    margin-left: 10px;
-   }
-.btn-success {
-    color: #fff;
-    background-color: #5cb85c;
-    border-color: #4cae4c;
-    margin-top: 10px;
+p.ruby {
+    font-weight: bold;
     font-size: 20px;
 }
+p.content {
+  font-weight: bold;
+  font-size: 20px;
+  color: red;
+}
+p.rubyonrails {
+  font-weight: bold;
+  font-size: 20px;
+  color:#5cb85c;
+}
+b.page{
+  color: #fff;
+  font-weight: bold;
+}
+.title {
+  color: #fff;
+  text-align: center;
+  background: #78b43d;
+  min-height: 60px;
+}
 
-
+.tochoose{
+  background-color: #78b43d;
+  margin-top: -10px;
+}
+.row.chon {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+a.btn-success{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.btn-info {
+  color: #fff;
+}
+.btn-primary{
+  margin-top: 10px;
+  font-size: 20px;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
 .title-main{
-    margin-top: 10px;
-  }
- b.page {
+  color: #ff6600;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-group {
+
+    margin-top: 20px;
+}
+.form_content {
+    margin-left: -35px;
+}
+
+.actions {
+    margin-left: 140px;
+    margin-top: 15px;
+}
+
+.button{
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.newpost {
+    margin-left: -10px;
+    margin-top: 22px;
+}
+
+
+/**menu**/
+.navbar-inverse{
+  background-color: #78b43d;
+}
+
+
+
+
+
+/*tintuc*/
+
+.row.tintuc {
+    margin-bottom: 15px;
+}
+
+.mrT5 {
+    margin-top: 15px;
+}
+.grnBxTit {
+    background: #78b43d;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1px;
+}
+.grnBxCntGrn {
+    border-left: #78b43d solid 2px;
+    border-right: #78b43d solid 2px;
+    border-bottom: #78b43d solid 2px;
+    padding: 5px 9px;
+}
+.pdB5 {
+    padding-bottom: 5px;
+}
+.pdB10 {
+    padding-bottom: 10px;
+}
+.clear {
+    clear: both;
+}
+.nwsTit {
     margin-left: 10px;
 }
+.nwsTit a{
+    color: #333;
+    font-weight: 700;
+  /*  margin-left: 10px;*/
+}
+
+.nwsTit a:hover {
+    color: #78b43d;
+}
+
+
+/****doanh nhân*/
+
+.bxDn .lstNws article a {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.lstNws article a {
+    text-decoration: none;
+    color: #000;
+    font-size: 11px;
+}
+.lstNws article a:hover {
+    color: #78b43d;
+}
+
+
+/*****news*****/
+.title_new_box {
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #78b43d;
+    padding-bottom: 7px;
+    border-bottom: 1px dotted #800000;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.li_tour_dest a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.li_tour_dest a:hover{
+    text-decoration: none;
+    color: #78b43d;
+    cursor: pointer;
+}
+
+.link_to{
+  color: #78b43d; 
+}
+.link_to:hover{
+  color: red; 
+}
+
+
+/*******sport*******/
+.img_hotel_index {
+    float: left;
+    margin-right: 10px;
+    width: 110px;
+    height: 86px;
+}
+.sport {
+    margin-top: 10px;
+}
+.sport a {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #000;
+}
+.sport a:hover {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #78b43d ;
+}
+.img_index {
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+/********giáo dục******/
+.box_rss_6_rss24hTop {
+    background: #378b36;
+    padding: 2px 10px 0 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.lstNws article a {
+    font-size: 12px;
+}
+.icoNws {
+    background: url(/images/new.gif) no-repeat top left;
+    width: 24px;
+    height: 12px;
+    display: inline-block;
+    margin: 0 0 0 5px;
+}
+.box_rss_6_rss24hCnt {
+    border-left: #378b36 solid 2px;
+    border-right: #378b36 solid 2px;
+    border-bottom: #378b36 solid 2px;
+    background: #fff;
+    padding: 5px;
+}
+.box_rss_6_rss24hCnt .lstNws article a {
+    font-size: 12px;
+}
+.box_rss_6_rss24hTop a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+.education a{
+  color: #378b36;
+  font-weight: bold;
+}
+
+/*****footer*****/
+.ftMn1Contnr {
+    background: #ebebeb;
+    padding: 10px;
+    border-top: #ddd solid 1px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: -3px;
+}
+.ftMn1 {
+    width: 1004px;
+    margin: 0 auto;
+    color: #000;
+}
+.ftMn1 a {
+    color: #000;
+}
+.ftMn1 ul.grpIt {
+    margin: 0;
+    padding: 0;
+}
+.grpIt ul, li {
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+img.logo {
+    margin-top: -13px;
+}
+
+.footer{
+    margin-top: 15px;
+    background-color: #378b36;
+    text-align: center;
+    color: #fff;
+    min-height: 40px;
+}
+
+.title_content {
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #78b43d;
+    padding-bottom: 7px;
+    border-bottom: 1px dotted #800000;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
 .content{
-  font-size: 13px;
-  color: #4cae4c;
+  margin-top: 20px;
+}
+
+
+
+/***chi tiet trang ***/
+.col-xs-4.col-sm-4.col-md-4.col-lg-4.silderbar {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+}
+
+.strong{
+  font-weight: bold;
 }

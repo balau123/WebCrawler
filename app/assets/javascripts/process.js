@@ -20,10 +20,6 @@ crawlerTitle=`
 `;
 img_loading=`  <img src="https://zippy.gfycat.com/SkinnySeveralAsianlion.gif" style="    width: 50px;">`;
 
-
-
-
-
 $(document).ready(function() {
   //crawler button
   $('#filter').click(function(event){
@@ -80,25 +76,6 @@ function article(id)
         });
 
 }
-
-function drawCategory(data) {
-alert(data);
-//category_post=`
-  // <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-  // <a href="" title="`+data['title']+`">
-  // <img src="`+data['img']+`" width="300px" height="190"  alt="bến thuyền tràng an">
-  // </a>
-  // <p class="tieudecon">
-  // <b><a href="" title="`+data['title']+`">Khu du lịch sinh thái Tràng An</a></b>
-  // </p> 
-  // </div>
-  // `;
-  // alert(category_post);
-  // $('#post_category').html(category_post);
-  
-
-}
-
 
 
 function drawButton(v,path){

@@ -1,40 +1,180 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Danh mục</th>
-      <th>Trang</th>
-      <th>Tiêu đề</th>
-      <th>Hình Ảnh</th>
-      <th>Liên kết</th>
-      <th>Mô tả</th>
-      <th>Nội dung</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.category %></td>
-        <td><%= post.page %></td>
-        <td><%= post.title %></td>
-        <td><%= post.image %></td>
-        <td><%= post.link %></td>
-        <td><%= post.content %></td>
-        <td><%= post.contentVerbose %></td>
-        
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-<%= link_to 'New Post', new_post_path %>
+  <meta charset="UTF-8">
+  <title>Document</title>
+   <%= stylesheet_link_tag "/app/asset/stylesheets/bootstrap.css" %>
+   <%= stylesheet_link_tag "/app/asset/stylesheets/bootstrap.min.css" %>
+   <%= stylesheet_link_tag "/app/asset/stylesheets/style.css" %>
+  
+  <%= javascript_include_tag "/app/asset/javascripts/jquery.min.js", "data-turbolinks-track" => true  %>
+  <%= javascript_include_tag "/app/asset/javascripts/process.js", "data-turbolinks-track" => true  %>
+
+  <%= javascript_include_tag "/app/asset/javascripts/bootstrap.min.js", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "/app/asset/javascripts/jquery_menu.js", "data-turbolinks-track" => true  %>
+  <%= javascript_include_tag "/app/asset/javascripts/jquery_min.js", "data-turbolinks-track" => true  %>
+
+</head>
+<body> 
+  <section class="container">
+    <div class="row">
+       <div id="carousel-id" class="carousel slide" data-ride="carousel">
+         <ol class="carousel-indicators">
+           <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+           <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+           <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+         </ol>
+         <div class="carousel-inner">
+           <div class="item">
+              <%= image_tag("1.jpg",
+                alt: "Image description here",
+                class: "img-responsive") %>
+              <div class="carousel-caption">
+                <button type="button" class="btn btn-success">Ruby on Rails</button>
+                <p class="rubyonrails">Ruby on Rails là một Framework mạnh mẽ và đầy thú vị được phát triển trên ngôn ngữ lập trình Ruby.</p>
+              </div>
+           </div>
+           <div class="item">
+                <%= image_tag("2.jpg",
+                alt: "Image description here", 
+                class: "img-respponsive") %>
+              <div class="carousel-caption">
+                <button type="button" class="btn btn-success">Ruby</button>
+                  <p class="content"> là một ngôn ngữ lập trình hướng đối tượng, có khả năng phản ứng. Ruby bị ảnh hưởng từ Ada và Perl với các đặc tính hướng đối tượng của Smalltalk, và cũng chia sẻ một số đặc tính với Python, Lisp, Dylan và CLU. Ruby là ngôn ngữ thông dịch đơn giai đoạn.</p>
+              </div>
+           </div>
+           <div class="item active">
+                 <%= image_tag("3.jpg",
+                alt: "Image description here", 
+                class: "img-respponsive") %>
+                <div class="carousel-caption">
+                 <button type="button" class="btn btn-primary">Ruby on Rails</button>
+              <strong>
+                <p class="ruby"> Ruby on Rails là một Framework mạnh mẽ và đầy thú vị được phát triển trên ngôn ngữ lập trình Ruby.</p> 
+              </strong>
+                </div>
+           </div>
+         </div>
+         <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+         <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+       </div>
+    </div>
+  </section>
+
+  <section class="container">
+     <div class="row">
+          <div class="title">
+              <h1 style="margin-top: 10px">
+                  <marquee width="100%" behavior="alternate">
+                      XÂY DỰNG WEBCRAWLER BẰNG RAILS
+                  </marquee>
+              </h1>
+          </div>
+      </div>
+  </section>
+
+  <section class="container">
+      <ul class="button">
+          <li>
+              <button class="btn-danger">All Posts</button>
+
+          </li>
+
+           <li class="newpost">
+              <%= link_to 'New Post', new_post_path, class:"btn-success" %>
+           </li>
+      </ul>
+  </section>
+ 
+   <section>
+      <p id="notice"><%= notice %></p>
+ 
+      <table border="2px">
+        <thead >
+          <tr class="tieude" style="background: #78b43d; color: #fff">
+            <th style="text-align: center" >Category</th>
+            <th style="text-align: center">Page</th>
+            <th style="text-align: center">Title</th>
+            <th style="text-align: center">Image</th>
+            <th style="text-align: center">Link</th>
+            <th style="text-align: center">Description</th>
+         
+            <th style="text-align: center , width:150px;" colspan="3">Action</th>
+          </tr>
+        </thead>
+
+        <tbody >
+          <% @posts.each do |post| %>
+            <tr>
+              <td><%= post.category %></td>
+              <td><%= post.page %></td>
+              <td><%= post.title %></td>
+              <td><%= image_tag(post.image,size: "120x100")%></td>
+              <td><%= post.link %></td>
+              <td><%= post.content %></td>
+              
+              <td>
+                <%= link_to 'Show', post , class:'btn-primary' %> 
+              </td>
+              <td>
+                <%= link_to 'Edit', edit_post_path(post),class:'btn-info' %>
+                </td>
+              <td>
+                <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } , class:'btn-warning' %>
+              </td>
+
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+
+    
+
+   </section>
+
+   
+
+  
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

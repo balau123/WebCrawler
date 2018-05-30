@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_14_020307) do
+ActiveRecord::Schema.define(version: 2018_05_23_071026) do
 
   create_table "posts", force: :cascade do |t|
-    t.string "category"
-    t.string "page"
-    t.string "title"
-    t.string "image"
-    t.string "link"
-    t.string "content"
+    t.text "category"
+    t.text "page"
+    t.text "title"
+    t.text "image"
+    t.text "link"
+    t.text "content"
+    t.text "contentVerbose"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

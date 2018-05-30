@@ -1,12 +1,351 @@
-<h1>Xem bai viet</h1>
+  
 
-    <% Post.where(id: @id).each {|t| %>
-    <h1><%= t.category %></h1>
-    <h2><%= t.title %></h2>
-      <h2><%= t.content %></h2>  
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <%= stylesheet_link_tag "/app/asset/stylesheets/bootstrap.css" %>
+  <%= stylesheet_link_tag "/app/asset/stylesheets/bootstrap.min.css" %>
+  <%= stylesheet_link_tag "/app/asset/stylesheets/style.css" %>
+  
+  <%= javascript_include_tag "/app/asset/javascripts/jquery.min.js", "data-turbolinks-track" => true  %>
+  <%= javascript_include_tag "/app/asset/javascripts/process.js", "data-turbolinks-track" => true  %>
+
+  <%= javascript_include_tag "/app/asset/javascripts/bootstrap.min.js", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "/app/asset/javascripts/jquery_menu.js", "data-turbolinks-track" => true  %>
+  <%= javascript_include_tag "/app/asset/javascripts/jquery_min.js", "data-turbolinks-track" => true  %>
+</head>
+<body>
+  
+      
+     <section>
+          <div class="row">
+             <div id="carousel-id" class="carousel slide" data-ride="carousel">
+               <ol class="carousel-indicators">
+                 <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+                 <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+                 <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+               </ol>
+               <div class="carousel-inner">
+                 <div class="item">
+                    <%= image_tag("1.jpg",
+                      alt: "Image description here",
+                      class: "img-responsive") %>
+                    <div class="carousel-caption">
+                      <button type="button" class="btn btn-success">Ruby on Rails</button>
+                      <p class="rubyonrails">Ruby on Rails là một Framework mạnh mẽ và đầy thú vị được phát triển trên ngôn ngữ lập trình Ruby.</p>
+                    </div>
+                 </div>
+                 <div class="item">
+                      <%= image_tag("2.jpg",
+                      alt: "Image description here", 
+                      class: "img-respponsive") %>
+                    <div class="carousel-caption">
+                      <button type="button" class="btn btn-primary">Ruby on Rails</button>
+                        <strong>
+                            <p class="ruby"> Ruby on Rails là một Framework mạnh mẽ và đầy thú vị được phát triển trên ngôn ngữ lập trình Ruby.</p>
+                        </strong>
+                    </div>
+                 </div>
+                 <div class="item active">
+                       <%= image_tag("3.jpg",
+                      alt: "Image description here", 
+                      class: "img-respponsive") %>
+                      <div class="carousel-caption">
+                        <button type="button" class="btn btn-success">Ruby</button>
+                          <p class="content">là một ngôn ngữ lập trình hướng đối tượng, có khả năng phản ứng. Ruby bị ảnh hưởng từ Ada và Perl với các đặc tính hướng đối tượng của Smalltalk, và cũng chia sẻ một số đặc tính với Python, Lisp, Dylan và CLU. Ruby là ngôn ngữ thông dịch đơn giai đoạn</p>
+                      </div>
+                 </div>
+               </div>
+               <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+               <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+          </div>
+     </section>
+
+    <section class="mrT5">
+      <nav class="navbar navbar-default container-fluid navbar-inverse" role="navigation">
+        <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="images/hii.png" alt="logo"></a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li><a  href="#">TRANG CHỦ </a></li>
+            <li><a  href="#">TIN TỨC</a></li>
+            <li><a  href="#">DU LỊCH</a></li>
+            <li><a  href="#">THỂ THAO </a></li>
+            <li><a  href="#">GIÁO DỤC</a></li>
+            <li><a  href="#">KINH DOANH</a></li>
+          </ul>
+        </div>
+          </div>
+        </nav>
+    </section>
+
+    <section class="container">
+        <div class="row">
+          <div class="title">
+              <h1 style="margin-top: 10px">
+                  <marquee width="100%" behavior="alternate">
+                      XÂY DỰNG WEBCRAWLER BẰNG RAILS
+                  </marquee>
+          </h1>
+          </div>
+        </div>
+    </section>
+
+    <section class="container">
+     <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 silderbar">
+              <header class="grnBxTit">
+                    <h4>Tin Tức</h4>
+              </header>
+              <div class="grnBxCntGrn bx4Tbg">
+                  <div class="clF pdB5"></div>
+                <%Post.where(category: "tintuc").limit(@limit).order('created_at desc').map.with_index {|t,index| %>
+                <% if index ==0%>
+          
+                    <div class="row tintuc">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                          <span class="imgFltT4 imgNwsHm">
+                                       <%= image_tag(t[:image],size: "120x100", :alt => t[:title]) %>
+                            </span>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <header class="nwsTit">
+                              <%= link_to t[:title],     postedinfo_path(t[:id]) %>
+                            </header>
+                        </div> 
+                    </div>
+
+                    <%else %>
+          
+                    <div class="row tintuc">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <span class="imgFltT4 imgNwsHm">
+                                         <%= image_tag(t[:image],size: "120x100", :alt => t[:title]) %>
+                              </span>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                              <header class="nwsTit">
+                                <%= link_to t[:title],     postedinfo_path(t[:id]) %>
+                              </header>
+                        </div>
+                    </div>
+          
+                   <%end%>
+
+                <%}%>
+                <div class="clear"></div>     
+              </div>
+
+              <header class="grnBxTit"><h4>Kinh doanh</h4></header>
+              <div class="grnBxCntGrn bxDnh">
+                    <div class="clF pdB10"></div>
+                  <%Post.where(category: "kinhdoanh").limit(@limit).order('created_at desc').map.with_index {|t,index| %>
+                  <% if index ==0%>
+                  <div class="row ">
+                      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                          <span class="imgFlt imgNwsSml">
+                          <a>
+                        <%= image_tag(t[:image],size: "120x100", :alt => t[:title]) %>
+                          </a>           
+                            </span>
+                      </div>
+
+                      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <header class="nwsTit">
+                                   <a>
+                                    <b><%= link_to t[:title],     postedinfo_path(t[:id]) %></b>
+                                   </a>
+                                </header>
+                                <%= t[:content]%>            
+                      </div>
+                  </div>
+              <%else%>
+              <div class="row ">
+                <div class="col-xs-12 col-sm-12 ">
+                  <header class="nwsTit">
+                             <a>
+                              <b><%= link_to t[:title],     postedinfo_path(t[:id]) %></b>
+                             </a>
+                          </header>           
+                </div>
+              </div>
+                         <%end%>
+            <%}%>
+  
+                </div>
+
+          </div> 
+
+
+  <!--         <% Post.where(id: @id).each {|t| %>
+    <% @category=t.category %>
+    <h3><%= t.title %></h3>
+      <h4><%= t.content %></h4>  
         <p><%= t.contentVerbose %></p>
         
-        <%= image_tag(t.image,size: "120x100", :alt => t.title) %>
+        <%= image_tag(t.image,size: "390x200", :alt => t.title) %>
     <% } %>
 
 <br>
+<br>
+
+
+   <%Post.where(category:@category ).limit(@limit).order('created_at desc').map.with_index {|t,index| %>
+   <%if t.id != @id%>
+    <h3><a><%= link_to t[:title],     postedinfo_path(t[:id]) %> </a></h3>
+      <h4><%= t.content %></h4>  
+        <%= image_tag(t.image,size: "220x150", :alt => t.title) %>
+
+     <%end%>
+    <% } %>
+
+<br> -->
+
+
+          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+
+                <% Post.where(id: @id).each {|t| %>
+                <% @category=t.category %>
+            <strong>
+              <h1 class="title_content"><%= t.title %></h1>
+            </strong>
+
+            <br>
+
+            <strong class="strong"><h4><%= t.content %></h4></strong>
+
+            <p>
+                <%= t.contentVerbose %>
+
+                 <%= image_tag(t.image,size: "390x200", :alt => t.title) %>
+                <% } %>
+            </p>
+
+            <br>
+            <br>
+            <h3 class="title_content">Related News</h3>
+            <div class="row">
+                <%Post.where(category:@category ).limit(@limit).order('created_at desc').map.with_index {|t,index| %>
+               <%if t.id != @id%>
+
+                <div class="col-xs-6 col-sm-6 sport">
+                    <a>
+                      <%= link_to t[:title],     postedinfo_path(t[:id]) %>
+                     </a>
+                     <br>
+                    <div class="img_index">
+                          <%= image_tag(t[:image],size: "120x100", :alt => t[:title]) %>
+                      </div>
+                      <p><%= t[:content]%> </p>
+                </div>
+
+               
+
+                 <%end%>
+                <% } %>
+ 
+            </div>
+
+          </div>
+              
+
+     </div>
+    </section>
+    
+    <section class=" mrT5 ">
+      <nav class="ftMn1Contnr clF">     
+      <div class="ftMn1">
+                <ul class="grpIt">
+                    <li>
+              <a href="#">
+                <b title="Tin tức">Tin tức</b>
+              </a>
+          </li>
+          <li>
+            <a href="#" title="Bóng đá">
+              <b title="Bóng đá">Bóng đá</b>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <b title="Thời trang">Thời trang</b>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <b>Pháp luật</b>
+            </a>
+            
+          </li>
+          <li>
+            <a href="#">
+              <b title="Hi-tech">Hi-tech</b>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+               <b title="Tài chính">Tài chính</b>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <b title="Làm đẹp">Làm đẹp</b>
+            </a>
+          </li>
+            <li>
+            <a href="#">
+              <b title="Sức khỏe">Sức khỏe</b>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <b title="Sức khỏe">Du lịch</b>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <b title="Sức khỏe">Ẩm Thực</b>
+            </a>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </nav>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
