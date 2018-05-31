@@ -1,0 +1,11 @@
+
+[Unit]
+Description=Web Crawler
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/data/WebCrawler/craw.sh
+
+[Install]
+WantedBy=multi-user.target

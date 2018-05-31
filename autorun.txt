@@ -1,0 +1,23 @@
+#locate at : /etc/systemd/system/
+#craw.service
+
+[Unit]
+Description=Web Crawler
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/data/WebCrawler/craw.sh
+
+[Install]
+WantedBy=multi-user.target
+#
+#
+#bash file
+locate at: /data/WebCrawler
+#
+#!/bin/sh
+sleep 10
+cd /data/WebCrawler
+/root/.rbenv/versions/2.5.1/bin/ruby bin/rails server
+#
