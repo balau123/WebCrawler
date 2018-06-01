@@ -40,6 +40,13 @@ $(document).ready(function() {
     });
   });
 
+
+  $('#showposted').click(function(data){
+  path=$(this).val();
+  window.open(path);
+  });
+
+
   //new Article button
 
     // ;(function($) {

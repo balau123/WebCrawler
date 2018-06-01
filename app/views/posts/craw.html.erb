@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <%= javascript_include_tag "application.js" %>
-
   <%= stylesheet_link_tag "application.css" %>
 
 </head>
@@ -68,6 +67,8 @@
 <div id="results"></div> 
 
       <div class="row">
+        <br><button id ='showposted' name='showposted' value=<%=posted_path%> style="margin-left: 14px;" type="button" class="btn btn-success" >Xem bài</button>
+
           <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 tochoose">
                 <div class="row">
                     <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
@@ -105,7 +106,7 @@
                         </div>
                     <% end %>
                     <% } %>
-
+                    
                     </div>     
                 </div>                                       
           </div>
